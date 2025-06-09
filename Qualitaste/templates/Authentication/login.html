@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login | Tasty Bite</title>
+
+  {% load static%}
+  <link rel="stylesheet" href="{% static '/Authentication/auth.css' %}"/>
+</head>
+<body>
+  <div class="auth-container">
+    <h2>Login</h2>
+    <form method="post" action="{% url 'login' %}">
+
+      {% csrf_token %}
+      
+      <input type="email" placeholder="Email" name="email" required />
+      <input type="password" placeholder="Password" name="password" required />
+
+      {% if error %}
+        <p style="color: red;">{{ error }}</p>
+      {% endif %}
+
+      <button type="submit">Login</button>
+    </form>
+    <div class="auth-links">
+      <a href="{% url 'signup' %}">Sign Up</a> |
+      <a href="{% url 'password_reset' %}">Forgot Password?</a>
+    </div>
+  </div>
+</body>
+</html>

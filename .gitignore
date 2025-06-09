@@ -1,0 +1,4 @@
+/VirtEnv/
+db.sqlite3
+/*pycache*/
+/migrations/

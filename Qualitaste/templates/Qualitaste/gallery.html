@@ -1,0 +1,128 @@
+<!-- Tasty Bite | Gallery Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tasty Bite | Gallery</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'Qualitaste/style.css' %}">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">Tasty<span>Bite</span></div>
+
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+
+    <ul class="nav-links" id="navMenu">
+      <li><a href="{% url 'home' %}">Home</a></li>
+      <li><a href="{% url 'order' %}">Order</a></li>
+      <li><a href="{% url 'gallery' %}" class="active">Gallery</a></li>
+      <li><a href="{% url 'help' %}" >Help</a></li>
+
+      {% if user.is_authenticated %}
+        <li><a href="{% url 'profile' %}">Profile</a></li>
+      {% endif %}
+      
+    </ul>
+  </nav>
+
+  <section class="gallery">
+    <h2>Our Cake Collection</h2>
+    <div class="gallery-cards">
+
+      <div class="card">
+        {% load static %}
+        <img src="{% static 'Qualitaste/images/image1.jpg' %}" alt="Birthday Cake">
+        <div class="card-info">
+          <h3>Birthday Cake</h3>
+          <p></p>
+        </div>
+      </div>
+
+      <div class="card">
+        {% load static %}
+        <img src="{% static 'Qualitaste/images/image2.jpg' %}" alt="Wedding Cake">
+        <div class="card-info">
+          <h3>Wedding Cake</h3>
+          <p></p>
+        </div>
+      </div>
+
+      <div class="card">
+        {% load static %}
+        <img src="{% static 'Qualitaste/images/image1.jpg' %}" alt="Graduation Cake">
+        <div class="card-info">
+          <h3>Graduation Cake</h3>
+          <p></p>
+        </div>
+      </div>
+
+      <div class="card">
+        {% load static %}
+        <img src="{% static 'Qualitaste/images/image3.jpg' %}" alt="Introduction Cake">
+        <div class="card-info">
+          <h3>Introduction Cake</h3>
+          <p></p>
+        </div>
+      </div>
+
+      <div class="card">
+        {% load static %}
+        <img src="{% static 'Qualitaste/images/image1.jpg' %}" alt="Cupcakes">
+        <div class="card-info">
+          <h3>Cupcakes</h3>
+          <p></p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+<footer>
+<div class="footer-content">
+  <h3>Tasty Bite</h3>
+  <p>Quality and class</p>
+<div style="background-color: #000; color: #fff; padding: 20px; text-align: center;">
+  <div style="display: flex; justify-content: center; gap: 40px; align-items: center; flex-wrap: wrap;">
+
+    <!-- Phone -->
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#fff" viewBox="0 0 24 24">
+        <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1.003 1.003 0 011.11-.21c1.21.48 2.53.74 3.89.74a1 1 0 011 1V20a1 1 0 01-1 1c-9.39 0-17-7.61-17-17a1 1 0 011-1h3.5a1 1 0 011 1c0 1.36.25 2.68.74 3.89a1.003 1.003 0 01-.21 1.11l-2.2 2.2z"/>
+      </svg>
+      <span>+256 772 9490</span>
+    </div>
+
+    <!-- Email -->
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#fff" viewBox="0 0 24 24">
+        <path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 2v.01L12 13 4 6.01V6h16zM4 18V8.1l7.6 6.3a1 1 0 001.2 0L20 8.1V18H4z"/>
+      </svg>
+      <span>qualitastebakery@gmail.com</span>
+    </div>
+
+    <!-- WhatsApp -->
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#fff" viewBox="0 0 32 32">
+        <path d="M16.005 3.2C9.07 3.2 3.2 9.07 3.2 16.005c0 2.707.7 5.332 2.036 7.651L3.005 28.8l5.358-2.198A12.756 12.756 0 0016.005 28.8C22.94 28.8 28.8 22.93 28.8 16.005 28.8 9.07 22.93 3.2 16.005 3.2zm0 23.27a10.52 10.52 0 01-5.366-1.488l-.384-.226-3.181 1.304.605-3.36-.22-.385A10.52 10.52 0 015.48 16c0-5.801 4.724-10.525 10.525-10.525 5.801 0 10.525 4.724 10.525 10.525 0 5.801-4.724 10.525-10.525 10.525zm5.835-7.9c-.32-.16-1.89-.93-2.18-1.04-.29-.1-.5-.16-.71.16-.21.32-.82 1.04-1.01 1.25-.19.21-.37.24-.69.08-.32-.16-1.34-.5-2.55-1.6-.94-.84-1.57-1.88-1.76-2.2-.18-.32-.02-.49.14-.64.14-.14.32-.37.48-.56.16-.19.21-.32.32-.53.11-.21.05-.4-.02-.56-.07-.16-.71-1.71-.97-2.34-.26-.63-.52-.55-.71-.56l-.6-.01c-.21 0-.56.08-.85.4-.29.32-1.12 1.1-1.12 2.69s1.15 3.13 1.31 3.35c.16.21 2.26 3.44 5.48 4.82 3.23 1.38 3.23.92 3.81.86.59-.05 1.89-.77 2.16-1.51.27-.74.27-1.37.19-1.51-.08-.13-.29-.21-.61-.37z"/>
+      </svg>
+      <span>+256 772 9490</span>
+    </div>
+
+  </div>
+</div>
+
+    </div>
+</footer>
+
+  <script>
+    function toggleMenu() {
+      const navMenu = document.getElementById('navMenu');
+      navMenu.classList.toggle('show');
+    }
+  </script>
+
+</body>
+</html>

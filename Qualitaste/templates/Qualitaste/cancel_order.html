@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Tasty Bite | Payments</title>
+        <style>
+            body {
+                margin: 0;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                background-color: #fff8f2;
+                color: #333;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 5%;
+                text-align: center;
+              }
+            p{
+                max-length: 400px;
+                text-wrap: wrap;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h2> {{ message }} </h2> <br>
+        <p>Go back to <a href="{% url 'profile' %}">Profile</a> page.</p>
+    </body>
+</html>
