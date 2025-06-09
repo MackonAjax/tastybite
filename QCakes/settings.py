@@ -85,28 +85,28 @@ WSGI_APPLICATION = 'QCakes.wsgi.application'
 DATABASE_URL = 'postgresql://cybercobra:jbataYXDRyAHb9WhBl2rpKWYSSsuHQzs@dpg-d0m9bm7diees73dpkdlg-a/cycovecoders'
 #
 
-# DATABASES = {
-#     'default': dj_database_url.config(
-#         default=DATABASE_URL, conn_max_age=600
-#     )
-#
-#     # {
-#     #     'ENGINE': 'django.db.backends.postgresql',
-#     #     'NAME': 'cycovecoders',
-#     #     'USER': 'cybercobra',
-#     #     'PASSWORD': 'jbataYXDRyAHb9WhBl2rpKWYSSsuHQzs',
-#     #     'HOST': dj_database_url.parse(DATABASE_URL, conn_max_age=600),
-#     #     'PORT': 5432,
-#     #
-#     # }
-# }
-
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': dj_database_url.config(
+        default=DATABASE_URL, conn_max_age=600
+    )
+
+    # {
+    #     'ENGINE': 'django.db.backends.postgresql',
+    #     'NAME': 'cycovecoders',
+    #     'USER': 'cybercobra',
+    #     'PASSWORD': 'jbataYXDRyAHb9WhBl2rpKWYSSsuHQzs',
+    #     'HOST': dj_database_url.parse(DATABASE_URL, conn_max_age=600),
+    #     'PORT': 5432,
+    #
+    # }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 
 
 
