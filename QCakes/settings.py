@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-zgxyot^l52po=^mq5kv7$gl=z(zgavs@yp8)r%fj33%)$b8@2e
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['tastybite.onrender.com', 'tastybite.com', '127.0.0.1']
+ALLOWED_HOSTS = ['tastybite.onrender.com', 'tastybite.com', 'tastybite-wuqj.onrender.com', '*.onrender.com']
 
 
 # Application definition
